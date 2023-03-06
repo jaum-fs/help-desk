@@ -30,6 +30,7 @@ public class DBService {
 	
 	public void dbInstance() {
 		
+		
 		Tecnico t1 = new Tecnico(null, "Valdir Cezar", "6365320268", "vadir@mail.com", "123" );
 		t1.addPerfil(Perfil.ADMIN);
 		
