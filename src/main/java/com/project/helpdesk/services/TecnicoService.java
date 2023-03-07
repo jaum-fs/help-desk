@@ -14,6 +14,8 @@ import com.project.helpdesk.repositories.TecnicoRepository;
 import com.project.helpdesk.services.exceptions.DataIntegrityViolationException;
 import com.project.helpdesk.services.exceptions.ObjectNotFoundException;
 
+import jakarta.validation.Valid;
+
 @Service
 public class TecnicoService {
 
@@ -38,6 +40,23 @@ public class TecnicoService {
 		return repository.save(obj);
 	}
 
+	public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
+		objDTO.setId(id);
+		Tecnico oldObj = findById(id);
+		validaPorCpfEEmail(objDTO);
+		oldObj = new Tecnico(objDTO);
+		
+		return repository.save(oldObj);
+	}
+	
+	public void delete(Integer id) {
+		Tecnico obj = findById(id);
+		if(obj.getChamados().size()>0) {
+			throw new DataIntegrityViolationException("Técnico possui ordens de serviço e não pode ser deletado!");
+		}
+		repository.deleteById(id);
+	}
+	
 	private void validaPorCpfEEmail(TecnicoDTO objDTO) {
 		
 		Optional<Pessoa> obj = pRepository.findByCpf(objDTO.getCpf());

@@ -31,13 +31,13 @@ public class DBService {
 	public void dbInstance() {
 		
 		
-		Tecnico t1 = new Tecnico(null, "Valdir Cezar", "6365320268", "vadir@mail.com", "123" );
+		Tecnico t1 = new Tecnico(null, "Valdir Cezar", "34396824203", "vadir@mail.com", "123" );
 		t1.addPerfil(Perfil.ADMIN);
 		
-		Tecnico t2 = new Tecnico(null, "Pedro Ferreira", "36482647512", "pedro@mail.com", "456" );
+		Tecnico t2 = new Tecnico(null, "Pedro Ferreira", "62257821092", "pedro@mail.com", "456" );
 		t2.addPerfil(Perfil.ADMIN);
 		
-		Cliente c1 = new Cliente(null, "Linus Tovalds", "63614523658", "torvalds@mail.com", "123");
+		Cliente c1 = new Cliente(null, "Linus Tovalds", "14831044270", "torvalds@mail.com", "123");
 		
 		Chamado call = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro Chamado", t1, c1);
 		
