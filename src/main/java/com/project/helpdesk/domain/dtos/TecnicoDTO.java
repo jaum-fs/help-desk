@@ -1,4 +1,4 @@
-package com.project.helpdesk.dtos;
+package com.project.helpdesk.domain.dtos;
 
 import java.io.Serializable;
 import java.time.LocalDate;

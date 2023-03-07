@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.project.helpdesk.domain.dtos.TecnicoDTO;
 import com.project.helpdesk.domain.enums.Perfil;
-import com.project.helpdesk.dtos.TecnicoDTO;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
