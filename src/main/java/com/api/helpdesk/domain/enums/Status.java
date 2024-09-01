@@ -14,7 +14,7 @@ public enum Status {
     private String descricao;
 
     public static Status toEnum(Integer cod){
-        if (cod.equals(null)){
+        if (cod==null){
             return null;
         }
         

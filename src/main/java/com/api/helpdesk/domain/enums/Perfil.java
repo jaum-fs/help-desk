@@ -14,7 +14,7 @@ public enum Perfil {
     private String descricao;
 
     public static Perfil toEnum(Integer cod){
-        if (cod.equals(null)){
+        if (cod==null){
             return null;
         }
 

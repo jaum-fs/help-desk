@@ -14,7 +14,7 @@ public enum Prioridade {
     private String descricao;
 
     public static Prioridade toEnum(Integer cod){
-        if (cod.equals(null)){
+        if (cod==null){
             return null;
         }
         
